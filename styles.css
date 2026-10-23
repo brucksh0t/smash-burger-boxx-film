@@ -69,7 +69,7 @@ a{color:inherit}
 .chap,.film__prog{display:none}
 .hero .film__pin{display:grid;gap:28px;padding:32px var(--g) 48px;max-width:1320px;margin:0 auto}
 .impact .film__pin{display:grid;gap:24px;padding:64px var(--g);max-width:1320px;margin:0 auto}
-@media (min-width:900px){.hero .film__pin,.impact .film__pin{grid-template-columns:1fr auto;align-items:center}html:not(.exp) .stage{width:min(46vw,760px,calc(1080px / var(--dpr)))}}
+@media (min-width:900px){.hero .film__pin,.impact .film__pin{grid-template-columns:1fr auto;align-items:center}html:not(.exp) .stage{width:min(46vw,760px,calc(1080px / var(--dpr)),calc((100svh - 144px) * 3 / 4))}}
 /* experience mode: pinned tracks */
 .exp .hero{height:300vh}.exp .impact{height:240vh}
 .exp .film__pin{position:sticky;top:var(--top);height:calc(100svh - var(--top));padding-top:20px;padding-bottom:20px;align-content:center}

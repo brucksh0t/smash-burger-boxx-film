@@ -17,6 +17,8 @@
 }
 :root{--ink:#17130f;--body:#2b251f;--muted:#5e554b;--paper:#f5efe3;--paper2:#ebe2d1;--red:#b3121f;--red-d:#8e0d18;--white:#fff;
 --g:clamp(16px,5vw,64px);--top:64px;--dpr:1;--ease:cubic-bezier(.2,.7,.1,1)}
+/* no-JS: device-pixel default so 1.0x caps hold without the inline script */
+@media (min-resolution:1.01dppx){:root{--dpr:2}}@media (min-resolution:2.01dppx){:root{--dpr:3}}@media (min-resolution:3.01dppx){:root{--dpr:4}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:var(--top)}
 body{margin:0;background:var(--paper);color:var(--body);font:400 17px/1.6 Archivo,system-ui,sans-serif;font-stretch:100%}
 img,video,canvas{display:block;max-width:100%}

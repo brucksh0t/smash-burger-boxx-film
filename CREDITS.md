@@ -12,7 +12,8 @@ Google Maps uploaders were read from each photo's contributor link on the listin
 | media/stand.* (gm g1, 1600x2133) | Stand, wider view | Google Maps listing photo | The Smashburger Boxx (owner) |
 | media/fries.* (gm g5, 1600x1200) | Fries bucket and soda | Google Maps listing photo | The Smashburger Boxx (owner) |
 | img/menu-board.* (gm g8, 1024x1536) | Menu board | Google Maps listing photo | The Smashburger Boxx (owner) |
-| img/ig-* (1080x1080) | Handheld burgers at the stand | Instagram @smashburgerboxx public posts Da9L8MaRBmt, DbbTY-qx9Zy, DcTwtCWRuvM, Dcjhw5ZRMCr, DdZYYWyxy2n | The Smashburger Boxx |
+| img/ig-* (1080x1080) | Handheld burgers at the stand | Instagram @smashburgerboxx public posts: ig-window Da9L8MaRBmt, ig-sign DbbTY-qx9Zy, ig-mural DcTwtCWRuvM, ig-stack Dcjhw5ZRMCr (ig-awning DdZYYWyxy2n was unused and removed) | The Smashburger Boxx |
+| img/favicon.png (64x64) | Red awning-and-box glyph | Flat icon drawn for this demo; no photo source | Web Builder |
 Visitor photos (leslie Flynn) are shown with credit for the concept demo only. Ask before any commercial reuse.
 
 ## How the motion is made (no generation, no upscaling)
@@ -21,7 +22,7 @@ Visitor photos (leslie Flynn) are shown with credit for the concept demo only. A
 - GenerateVideo wasn't used: its 720p maximum would need upscaling, which the no-upscale rule forbids.
 
 ## Facts (Sept 26, 2026, from the original concept's CREDITS)
-Menu and prices are from the Google Maps menu board. Hours are from Bing and Google: Thu–Sun 2–8 PM, Mon–Wed closed (seasonal). Rating 4.6 (26 reviews) on Google Maps. History is from Trixie's List (Jan 24, 2025) and The Soft Spot, Issue 36 (Jul 3, 2025). The quote is from an @smashburgerboxx caption.
+Menu and prices are from the Google Maps menu board. Hours are from the @smashburgerboxx Instagram bio and Google (Oct 23, 2026): Thu–Sun 2–8 PM, Mon–Wed closed (seasonal). Rating 4.7 (32 reviews) on Google Maps, checked Oct 23, 2026. History is from Trixie's List (Jan 24, 2025) and The Soft Spot, Issue 36 (Jul 3, 2025). The quote is from an @smashburgerboxx caption.
 
 ## Code and fonts
 GSAP 3.12.5 + ScrollTrigger (self-hosted, GreenSock standard license). Archivo + Instrument Serif (self-hosted latin subsets from Google Fonts, SIL OFL 1.1).

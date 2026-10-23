@@ -9,6 +9,9 @@
   [].forEach.call(document.querySelectorAll('.hours tr'),function(tr){var x=+tr.dataset.d;if(x===d||(x===1&&d>=1&&d<=3))tr.classList.add('today');});
   // loops: play only on screen; saveData / reduced motion keep the poster
   var vids=[].slice.call(document.querySelectorAll('video.loop')),lite=R.classList.contains('lite');
+  // video posters load on approach (or at once when the page is static), never in the first paint
+  function poster(v){if(v.dataset.poster&&!v.poster)v.poster=v.dataset.poster;}
+  if(!exp||!('IntersectionObserver' in window))vids.forEach(poster);else{var pio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){poster(e.target);pio.unobserve(e.target);}});},{rootMargin:'150% 0px'});vids.forEach(function(v){pio.observe(v);});}
   if(exp&&!lite&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
       if(e.isIntersecting){if(v.preload!=='auto'){v.preload='auto';}var p=v.play();if(p&&p.catch)p.catch(function(){});}else v.pause();});},{rootMargin:'200px 0px'});
     vids.forEach(function(v){io.observe(v);});}
@@ -36,5 +39,8 @@
   if(build&&steps.length){var cur=0;function set(i){if(i===cur)return;cur=i;steps.forEach(function(s,j){s.classList.toggle('is-on',j===i);});
       shots.forEach(function(s,j){if(j===i){G.fromTo(s,{clipPath:'inset(0 0 100% 0)',zIndex:2},{clipPath:'inset(0 0 0% 0)',duration:.55,ease:'expo.out',onComplete:function(){shots.forEach(function(o,k){if(k!==i)o.classList.remove('is-on');});s.classList.add('is-on');G.set(s,{zIndex:1});}});}});}
     ScrollTrigger.create({trigger:build,start:'top top',end:'+=220%',pin:'.build__pin',pinSpacing:true,onUpdate:function(st){set(Math.min(steps.length-1,Math.floor(st.progress*steps.length)));}});}
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){ScrollTrigger.refresh();});
+  // film triggers were created before the pinned scenes: re-sort by page order so the pin spacing is counted
+  ScrollTrigger.sort();ScrollTrigger.refresh();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){ScrollTrigger.sort();ScrollTrigger.refresh();});
+  addEventListener('load',function(){ScrollTrigger.sort();ScrollTrigger.refresh();});
 })();

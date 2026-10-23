@@ -6,8 +6,8 @@
 <title>The Smashburger Boxx · smash burgers on Ten Broeck Ave, Hudson NY (film edition, concept)</title>
 <meta name="description" content="Old-school smash burgers, crispy fries and milkshakes from a red-and-white container stand at 93 Ten Broeck Ave, Hudson, NY. Unofficial concept preview.">
 <meta name="theme-color" content="#f5efe3">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Instrument+Serif:ital@1&display=swap">
+<link rel="preload" as="font" type="font/woff2" href="fonts/archivo-normal.woff2" crossorigin>
+<link rel="icon" href="img/favicon.png">
 <link rel="preload" as="image" type="image/avif" href="img/hero-poster.avif" fetchpriority="high">
 <link rel="stylesheet" href="styles.css">
 <script>(function(){var d=document.documentElement,r=matchMedia('(prefers-reduced-motion: reduce)').matches,q=location.search,c=navigator.connection,sd=c&&c.saveData;
@@ -95,7 +95,7 @@ if(!r&&!/static/.test(q))d.classList.add('exp');if(sd||/lite/.test(q))d.classLis
         </ul>
       </div>
       <figure class="frame frame--fries clip">
-        <video class="loop" muted playsinline loop preload="none" width="1200" height="900" poster="media/fries-poster.webp" aria-label="Fries in a paper bucket with a bottle of soda on a red picnic table, slow pan"><source src="media/fries.mp4" type="video/mp4"><source src="media/fries.webm" type="video/webm"></video>
+        <video class="loop" muted playsinline loop preload="none" width="1200" height="900" data-poster="media/fries-poster.webp" aria-label="Fries in a paper bucket with a bottle of soda on a red picnic table, slow pan"><source src="media/fries.mp4" type="video/mp4"><source src="media/fries.webm" type="video/webm"></video>
         <figcaption class="label">Photo: The Smashburger Boxx via Google Maps · slow pan</figcaption>
       </figure>
     </div>
@@ -145,7 +145,7 @@ if(!r&&!/static/.test(q))d.classList.add('exp');if(sd||/lite/.test(q))d.classLis
       <a class="ln ln--arrow" href="https://www.instagram.com/smashburgerboxx/">Follow @smashburgerboxx <span class="ar" aria-hidden="true">→</span></a>
     </div>
     <figure class="frame frame--stand clip">
-      <video class="loop" muted playsinline loop preload="none" width="1080" height="1440" poster="media/stand-poster.webp" aria-label="The container stand with its striped awning, slow push in"><source src="media/stand.mp4" type="video/mp4"><source src="media/stand.webm" type="video/webm"></video>
+      <video class="loop" muted playsinline loop preload="none" width="1080" height="1440" data-poster="media/stand-poster.webp" aria-label="The container stand with its striped awning, slow push in"><source src="media/stand.mp4" type="video/mp4"><source src="media/stand.webm" type="video/webm"></video>
       <figcaption class="label">Photo: The Smashburger Boxx via Google Maps · slow push</figcaption>
     </figure>
   </div>
